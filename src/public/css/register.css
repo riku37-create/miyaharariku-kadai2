@@ -1,0 +1,116 @@
+.register {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    background-color: #F8F8F8;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 32px;
+    color: #333333;
+}
+
+.register__inner {
+    width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.register__frame {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product__label {
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.require {
+    padding: 0 5px;
+    background-color: #FD0707;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.name-input, .price-input  {
+    padding: 11px 10px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #E0DFDE;
+}
+
+.update-danger {
+    margin: 0;
+    color: #FD0707;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.season-checkbox {
+    display: flex;
+    gap: 50px;
+}
+
+.some {
+    color: #FD0707;
+}
+
+.season-checkbox__option {
+    display: flex;
+    gap: 5px;
+}
+
+.description-input {
+    height: 160px;
+    padding: 11px 10px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    color: #E0DFDE;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.back {
+    background-color: #E0DFDE;
+    padding: 13px 10px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #4B4B4B;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.move-register {
+    background-color: #F5C800;
+    padding: 13px 10px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #4B4B4B;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+

@@ -1,2 +1,5 @@
 docker/mysql/data/*
 !.gitkeep
+# storageディレクトリ全体を無視するが、app/publicを除外
+/storage/*
+!/storage/app/public

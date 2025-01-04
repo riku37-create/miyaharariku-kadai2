@@ -1,12 +1,12 @@
-＃　アプリケーション名
-
-##　環境
+## アプリケーション名
+基礎学習ターム 確認テスト_もぎたて
+## 環境
 ・Laravel:
 ・Php:
 ・Database:MySQL
 ・その他:
 
-＃＃　環境構築
+## 環境構築
 ```
 1. 下記でディレクトリ内にクローンしてください。
   $ git@github.com:riku37-create/miyaharariku-kadai2.git
@@ -18,9 +18,9 @@
 4. データベースに接続するために、.env.exampleファイルをコピーして、.envファイルを作成します。
 PHPコンテナ内で、以下のコマンドを実行してください。
   $ cp .env.example .env
-5. VSCode から.envファイルの11行目以降を以下のように修正してください。  
+5. VSCode から.envファイルの11行目以降を以下のように修正してください。
   // 前略
-  
+
   DB_CONNECTION=mysql
   - DB_HOST=127.0.0.1
   + DB_HOST=mysql
@@ -31,20 +31,50 @@ PHPコンテナ内で、以下のコマンドを実行してください。
   + DB_DATABASE=laravel_db
   + DB_USERNAME=laravel_user
   + DB_PASSWORD=laravel_pass
-  
+
   // 後略
 6. アプリケーションを実行できるように、PHPコンテナで以下のコマンドを実行してください。
   $ php artisan key:generate
-7. マイグレーションとシーディング
-
-  エラーが発生する場合は、以下のコマンドを実行しもう一度コマンドを実行しなおしてみましょう。
+7. データベースのマイグレーションとシーディングを行うため、PHPコンテナで以下のコマンドを実行してください。
+  $ php artisan migrate --seed
+8. エラーが発生する場合は、以下のコマンドを実行しもう一度コマンドを実行しなおしてください。
   $ sudo chmod -R 777 *
 ```
 
-##　ER図
+## ER図
+![ER図](./product.drawio.png)
 
-##　URL
+## URL
+```
+・http://localhost/products　商品一覧画面
+・http://localhost/products/register　商品登録画面
+・http://localhost/products/{productId}　商品詳細画面
+```
 
-## ディレクトリ構成
+## ファイル
+```
+コントローラー: ProductController
+ビュー:  商品一覧画面: index.blade.php
+        商品登録画面: register.blade.php
+        商品詳細画面: detail.blade.php
+        レイアウト用: app.blade.php
+css: 商品一覧画面: index.css
+     商品登録画面: register.css
+     商品詳細画面: detail.css
+     レイアウト用: common.css
+     リセット用: sanitize.css
+フォームリクエスト: ProductRequest.php
+モデル: Product.php
+       Season.php
+マイグレーション: create.seasons.table(seasonsテーブル)
+               create.products.table(productsテーブル)
+               create.product_season.table(中間テーブル)
+シーディング: SeasonsTableSeeder
+            ProductsTableSeeder
+            ProductSeasonTableSeeder
+```
+## その他
+登録した画像は、src/storage/app/public/fruits-imgに保存。
+
 
 

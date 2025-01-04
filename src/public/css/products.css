@@ -1,0 +1,228 @@
+.products-heading {
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 0px 40px 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products-heading__title {
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.move-register {
+    padding: 13px 20px 13px 20px;
+    border-radius: 5px;
+    background-color: #FFA929;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4B4B4B;
+}
+
+.products-inner {
+    height: 790px;
+    padding: 0px 40px 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.products-inner__left {
+    width: 240px;
+    height: 267px;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form {
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-form:last-child {
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+.search-form__keyword-input {
+    box-sizing: border-box;
+    height: 50px;
+    background-color: #FFFFFF;
+    border: solid 1px #E0DFDE;
+    border-radius: 25px;
+    padding: 14.5px 10px;
+    color: #E0DFDE;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.search-form__button {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 10px;
+    background-color: #F5C800;
+    border: solid 1px  #E0DFDE;
+    border-radius: 5px;
+    color: #4B4B4B;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.line-label {
+    height: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.line {
+    box-sizing: border-box;
+    height: 43px;
+    padding: 11px 10px;
+    background-color: #FFFFFF;
+    border: solid 1px  #E0DFDE;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sort-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: solid 1px #F5C800;
+    border-radius: 21px;
+    padding: 10px;
+}
+
+.sort-tag__label {
+    font-size: 14px;
+    color: #4B4B4B;
+    font-weight: 300;
+}
+
+.sort-tag__remove {
+    color: #F5C800;
+    border: solid 1px #F5C800;
+    border-radius: 100px;
+    font-weight: 300;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.sort-tag__remove:hover {
+    color: #cc0000;
+}
+
+.products-inner__light {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.cards-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards__content {
+    width: 374px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px  #E0DFDE;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cards__image {
+    width: 374px;
+    height: auto;
+    max-height: 281px;
+    object-fit: cover;
+}
+
+.cards__content-explanation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: none;
+    background-color: #FFFFFF;
+}
+
+.cards__content-explanation-name,
+.cards__content-explanation-price {
+    font-size: 24px;
+    font-weight: 400;
+    color: #4B4B4B;
+}
+
+
+
+
+
+
+/* ページネーション */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination-button.disabled {
+    background-color: #f9f9f9;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-link:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination-link.active {
+    background-color: #f9c834;
+    color: white;
+}
