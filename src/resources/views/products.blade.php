@@ -16,7 +16,7 @@
     <div class="product-inner__left">
         <form class="search-form" action="{{ route('products.search') }}" method="get">
             @csrf
-            <input class="search-form__keyword-input" type="text" name="name" placeholder="商品名で検索">
+            <input class="search-form__keyword-input" type="text" name="name" placeholder="商品名で検索" value="{{ old('name', request('name')) }}">
             <button class="search-form__button">検索</button>
         </form>
         <form class="search-form" action="{{ route('products.index') }}" method="get">
@@ -41,7 +41,7 @@
             @foreach($products as $product)
                 <div class="cards__content">
                     <a href="{{ route('products.detail', ['productId' => $product->id]) }}">
-                        <img class="cards__image" src="{{ asset('storage/fruits-img/' . basename($product->image)) }}" alt="{{ $product->name }}">
+                        <img class="cards__image" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
                     </a>
                     <div class="cards__content-explanation">
                         <p class="cards__content-explanation-name">{{ $product->name }}</p>

@@ -68,7 +68,7 @@ class ProductController extends Controller
         if ($product->image && Storage::exists($product->image)) {
             Storage::delete($product->image);
         }//更新前の画像削除
-        $imagePath = $request->file('image')->store('public/fruits-img');//fruits-imgに保存
+        $imagePath = $request->file('image')->storeAs('public/fruits-img',$request->file('image')->getClientOriginalName() );
         $product->image = $imagePath;
         $productData = $request->except(['_token', 'season','image']);// 季節と写真以外のデータ
         $seasonIds = $request->input('season', []); // 選択された季節 (デフォルト空配列)

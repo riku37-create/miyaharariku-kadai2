@@ -14,9 +14,9 @@
             <div class="top-left">
                 <div class="tag-list">
                     <span class="tag-blue">商品一覧</span>
-                    <span class="tag">>{{ $product->name }}</span>
+                    <span class="tag">{{ $product->name }}</span>
                 </div>
-                <img class="product__image" src="{{ asset('storage/fruits-img/' . basename($product->image)) }}" alt="{{ $product->name }}">
+                <img class="product__image" src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}">
                 <div class="file-button">
                     <input class="file-control" type="file" name="image" placeholder="ファイルを選択">
                     <span class="file-name">{{ $product->image }}</span>
@@ -31,7 +31,7 @@
             <div class="top-right">
                 <div class="product__form">
                     <label class="product__form-label" for="name">商品名</label>
-                    <input class="product__form-input" type="text" name="name" value="{{ $product->name }}" placeholder="商品名を入力">
+                    <input class="product__form-input" type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="商品名を入力">
                 {{-- バリデーション --}}
                 @if ($errors->any())
                 @error('name')
@@ -41,7 +41,7 @@
                 </div>
                 <div class="product__form">
                     <label class="product__form-label" for="price">値段</label>
-                    <input class="product__form-input" type="text" name="price" value="{{ $product->price }}" placeholder="値段を入力">
+                    <input class="product__form-input" type="text" name="price" value="{{ old('price', $product->price) }}" placeholder="値段を入力">
                     {{-- バリデーション --}}
                     @if ($errors->has('price'))
                     @foreach ($errors->get('price') as $error){{--複数表示できていない--}}
@@ -74,7 +74,7 @@
         </div>
         <div class="product-bottom">
             <label class="product__description-label" for="description">商品説明</label>
-            <textarea class="product__description" name="description" placeholder="商品の説明を入力">{{ $product->description }}</textarea>
+            <textarea class="product__description" name="description" value="{{ old('description', $product->description) }}" placeholder="商品の説明を入力">{{ $product->description }}</textarea>
             {{-- バリデーション --}}
             @if ($errors->any())
             @error('description')

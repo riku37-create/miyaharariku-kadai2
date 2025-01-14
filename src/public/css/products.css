@@ -54,7 +54,7 @@
     border: solid 1px #E0DFDE;
     border-radius: 25px;
     padding: 14.5px 10px;
-    color: #E0DFDE;
+    color: #4B4B4B;
     font-size: 14px;
     font-weight: 300;
 }
@@ -124,10 +124,10 @@
 }
 
 .cards-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    justify-items: start;
 }
 
 .cards__content {
